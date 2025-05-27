@@ -2,7 +2,7 @@
 
 import { Response, OpenRouterResponse } from '@/lib/types';
 
-const API_KEY = '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';
+const API_KEY = process.env.NEXT_PUBLIC_OPENROUTER_API_KEY || '';
 const MODEL = 'deepseek/deepseek-chat-v3-0324';
 
 export async function generateResponses(

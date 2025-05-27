@@ -13,7 +13,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
       setStoredValue(item ? JSON.parse(item) : initialValue);
     } catch (error) {
       console.log(error);
-      return initialValue;
+      setStoredValue(initialValue);
     }
   }, [key, initialValue]);
 
